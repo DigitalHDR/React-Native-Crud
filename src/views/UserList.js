@@ -15,7 +15,7 @@ export default props => {
         onPress() {
           dispatch({
             type: 'deleteUser',
-            payload: user.id,
+            payload: user,
           })
         }
       },
