@@ -15,6 +15,14 @@ const actions = {
     }
   },
 
+  updateUser(state, action) {
+    const updated = action.payload
+    return {
+      ...state,
+      users: state.users.map(u => u.id === updated.id ? updated : u) 
+    }
+  },
+
   deleteUser(state, action) {
     const user = action.payload
     return {
